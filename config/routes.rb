@@ -2,5 +2,9 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/states' => 'pages#state'
+  get '/contractors' => 'pages#contractor'
+
+  get '/faq' => 'pages#faq'
+
 end
