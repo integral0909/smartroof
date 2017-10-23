@@ -9,29 +9,27 @@ html, body { overflow-x: hidden; }
   position:absolute;
   top:14px;
   right:22px;
-  color:white;
   font-size:15px;
   font-weight:300;
+  z-index:1;
 }
 .login-link {
   position:absolute;
   top:14px;
   right:70px;
-  color:white;
   font-size:15px;
   font-weight:300;
+  z-index:1;
 }
 .phone-link {
   position:absolute;
   top:14px;
   right:150px;
-  color:white;
   font-size:15px;
   font-weight:300;
+  z-index:1;
 }
-body {
-  min-height: 75rem;
-}
+
 ul {
   list-style-type: none;
 }
