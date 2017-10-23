@@ -1,0 +1,16 @@
+postgres:
+  environment:
+    - POSTGRES_PASSWORD=awesomepassword1
+  image: postgres
+  ports:
+    - 5432:5432
+
+web:
+  image: simpleroof_app
+  volumes:
+    - ./:/app
+  links:
+    - postgres:postgres
+  ports:
+    - 3000:3000
+    - 3035:3035
