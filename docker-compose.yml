@@ -6,7 +6,7 @@ postgres:
     - 5432:5432
 
 web:
-  image: simpleroof_app
+  image: smartroof_app
   volumes:
     - ./:/app
   links:
