@@ -4,7 +4,31 @@ $body-bg: #fff;
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Lato:300, 400');
 
-
+html, body { overflow-x: hidden; }
+.join-link {
+  position:absolute;
+  top:14px;
+  right:22px;
+  color:white;
+  font-size:15px;
+  font-weight:300;
+}
+.login-link {
+  position:absolute;
+  top:14px;
+  right:70px;
+  color:white;
+  font-size:15px;
+  font-weight:300;
+}
+.phone-link {
+  position:absolute;
+  top:14px;
+  right:150px;
+  color:white;
+  font-size:15px;
+  font-weight:300;
+}
 body {
   min-height: 75rem;
 }
