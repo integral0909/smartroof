@@ -1,6 +1,6 @@
 <% unless defined?(@roof) %>
 
-  <%= render "search", title: "Oops! The location you're looking for cannot be found!"
+  <%= render "search", title: "Oops! The location you're looking for cannot be found!" %>
 
 <% else %>
   <div id="roofs-progress">
@@ -25,7 +25,7 @@
     <div class="roofs-trace" id="roofs-trace">
       <div class="roofs-trace__area" id="roofs-trace__area"></div>
       <div class="roofs-trace__info" id="roofs-trace__info">
-        <input id="roofs-autocomplete" type="text" value="#{@roof.address}" />>
+        <input id="roofs-autocomplete" type="text" value="<%= @roof.address %>" />
       </div>
       <div class="roofs-trace__buttons">
         <button class="btn btn-primary disabled" id="roofs-trace__btn--undo">Undo</button>

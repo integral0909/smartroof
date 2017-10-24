@@ -12,7 +12,7 @@
 //
 //= require leaflet
 //= require leaflet-draw
-//= require jquery3
+//= require jquery
 //= require jquery_ujs
 //= require rails-ujs
 //= require turbolinks
