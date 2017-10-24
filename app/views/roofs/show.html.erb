@@ -1,0 +1,87 @@
+<% unless defined?(@roof) %>
+
+  <%= render "search", title: "Oops! The location you're looking for cannot be found!"
+
+<% else %>
+  <div id="roofs-progress">
+    <div class="jumbotron text-center">
+      <div class="container">
+        <div class="progress">
+          <div class="progress-bar" id="roofs-progress--trace" role="progressbar" style="width: 33%">
+            Trace Roof
+          </div>
+          <div class="progress-bar bg-secondary" id="roofs-progress--slope" role="progressbar" style="width: 33%">
+            Slope
+          </div>
+          <div class="progress-bar bg-secondary" id="roofs-progress--estimation" role="progressbar" style="width: 33%">
+            Get Estimate
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="roofs-slides">
+    <div class="roofs-trace" id="roofs-trace">
+      <div class="roofs-trace__area" id="roofs-trace__area"></div>
+      <div class="roofs-trace__info" id="roofs-trace__info">
+        <input id="roofs-autocomplete" type="text" value="#{@roof.address}" />>
+      </div>
+      <div class="roofs-trace__buttons">
+        <button class="btn btn-primary disabled" id="roofs-trace__btn--undo">Undo</button>
+        <button class="btn btn-success disabled" id="roofs-trace__btn--next">Next</button>
+      </div>
+    </div>
+
+    <div class="roofs-layer roofs-slope" id="roofs-slope">
+      <div class="container">
+        <h3>How steep is your roof?</h3>
+        <div class="card-group">
+          <div class="card" data-type="flat">
+            <div class="card-body">
+              <h4 class="card-title">Flat</h4>
+            </div>
+          </div>
+          <div class="card" data-type="low">
+            <div class="card-body">
+              <h4 class="card-title">Low</h4>
+            </div>
+          </div>
+          <div class="card" data-type="moderate">
+            <div class="card-body">
+              <h4 class="card-title">Moderate</h4>
+            </div>
+          </div>
+          <div class="card" data-type="steep">
+            <div class="card-body">
+              <h4 class="card-title">Steep</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="roofs-layer roofs-form">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-5">
+            <h3>Enter your contact info to be taken to your instant estimate.</h3>
+            <div class="message"></div>
+            <%= bootstrap_form_for @roof, remote: true do |f| %>
+              <%= f.text_field :name %>
+              <%= f.email_field :email %>
+              <%= f.text_field :phone %>
+              <%= f.hidden_field :address %>
+              <%= f.hidden_field :latitude %>
+              <%= f.hidden_field :longitude %>
+              <%= f.hidden_field :area %>
+              <%= f.hidden_field :slope %>
+              <%= f.submit 'Get Estimation', class: 'btn btn-success' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>

@@ -1,0 +1,11 @@
+
+<h3><%= @roof.address %></h3>
+<h5>Your roof replacement will cost approximately</h5>
+<h1 class="display-4 text-primary"><%= number_to_currency(@roof.estimation) %></h1>
+<p class="text-secondary"><%= "#{number_with_delimiter(@roof.area)} sq Ft. – #{@roof.slope.capitalize} Slope" %></p>
+
+<h3 class="text-primary">How many free quotes would you like?</h3>
+<div class="roofs-form__buttons">
+  <%= button_to '1 quote',  roof_path(@roof, quotes: 1), class: 'btn btn-outline-success', method: :put, remote: true %>
+  <%= = button_to '2 quotes', roof_path(@roof, quotes: 2), class: 'btn btn-outline-success', method: :put, remote: true %>
+</div>
