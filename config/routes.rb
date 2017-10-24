@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'pages#home'
+  resources :roofs, only: %i(index show create update)
 
   get '/fencing' => 'pages#fencing'
 
@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   get '/faq' => 'pages#faq'
   get '/terms' => 'pages#terms'
   get '/privacy' => 'pages#privacy'
+
+  root 'pages#home'
 
 end
