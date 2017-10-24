@@ -19,7 +19,7 @@ html, body { overflow-x: hidden; }
 .join-link {
   position:absolute;
   top:14px;
-  right:22px;
+  right:20px;
   font-size:15px;
   font-weight:300;
   z-index:1;
@@ -27,7 +27,7 @@ html, body { overflow-x: hidden; }
 .login-link {
   position:absolute;
   top:14px;
-  right:70px;
+  right:68px;
   font-size:15px;
   font-weight:300;
   z-index:1;
@@ -35,7 +35,7 @@ html, body { overflow-x: hidden; }
 .phone-link {
   position:absolute;
   top:14px;
-  right:150px;
+  right:146px;
   font-size:15px;
   font-weight:300;
   z-index:1;
