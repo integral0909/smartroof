@@ -1,0 +1,9 @@
+var $form    = $('.roofs-form')
+var $message = $form.find('.message')
+
+<% if @roof.errors.any? %>
+  $message.html("<div class='alert alert-danger'>Provided data seems to be invalid</div>")
+<% else %>
+  $form.find('.container').html("<%= escape_javascript(render('estimation', roof: @roof)) %>")
+  $('#roofs-progress--estimation').addClass('bg-success')
+<% end %>

@@ -1,0 +1,86 @@
+// Place all the styles related to the roofs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.roofs-slides, .roofs-trace {
+  position: relative;
+}
+.roofs-slides, .roofs-layer, .roofs-trace, .roofs-trace__area {
+  height: 640px;
+}
+.roofs-layer {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 7777;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.roofs-trace__buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  z-index: 400;
+  text-align: center;
+  button {
+    margin-right: 17px;
+  }
+}
+.roofs-trace__info {
+  position: absolute;
+  top: 12px;
+  left: 55px;
+  z-index: 400;
+  input {
+    width: 350px;
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+  }
+}
+
+.roofs-slope {
+  .container {
+    padding-top: 200px;
+  }
+  .card {
+    cursor: pointer;
+  }
+}
+
+.roofs-form {
+  padding-top: 125px;
+  h1 {
+    margin: 17px 0;
+  }
+}
+
+.roofs-form__buttons {
+  form {
+    display: inline-block;
+    margin-right: 7px;
+  }
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+.pac-container {
+    z-index: 1051 !important;
+}
+
+.leaflet-grab {
+  cursor: crosshair;
+}
+.leaflet-mouse-marker {
+  border-radius: 50px;
+  background: #2196F3;
+  border: 2px solid black;
+  border-color: rgba(0,0,0,0.2);
+  cursor: -webkit-grab;
+}

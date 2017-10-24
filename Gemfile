@@ -33,13 +33,21 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'bootstrap', '~> 4.0.0.alpha3'
+#gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'jquery-rails'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap', '4.0.0.beta'
+  gem 'rails-assets-leaflet'
+  gem 'rails-assets-leaflet-draw'
+end
+
+gem 'slim-rails'
+gem 'dotenv-rails'
+gem 'geocoder'
+gem 'bootstrap_form'
 
 group :development, :test do
-
-
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
@@ -60,6 +68,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
