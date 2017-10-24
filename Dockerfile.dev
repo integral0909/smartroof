@@ -4,6 +4,8 @@ FROM kozhin/rails-server:latest
 
 ENV RAILS_ENV development
 ENV NODE_ENV development
+ENV DESTINATION_EMAIL tyler@example.com
+ENV GOOGLE_MAPS_API AIzaSyCRXbrstYgvIZEWxkSBFoCGeHQpOnNQFHs
 
 # Install necessary packages
 RUN apt-get update && apt-get install libpq-dev -y && apt-get clean all
