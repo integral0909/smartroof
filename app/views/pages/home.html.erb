@@ -4,7 +4,7 @@
 
 
 <%= image_tag("Smart-Roof.png", class: "logo") %>
-<div class="phone-link"><a href="#" class="text-white">(678) 439-6456</a></div>
+<div class="phone-link"><a href="tel:+16784882616" class="text-white">(678) 439-6456</a></div>
 
 <% if user_signed_in? %>
   <div class="login-link">
@@ -90,7 +90,14 @@
 	</div>
 </div>
 
-<img src="https://i.imgur.com/kBuK3sl.jpg?1" class="img-fluid" />
+<%= image_tag("Instant-Roofing-Quote.jpg", class: "img-fluid") %>
+
+<%= image_tag("Facebook-Roofing-Reviews.png", class: "img-fluid") %>
+<%= image_tag("Google-Roofing-Reviews.png", class: "img-fluid") %>
+<%= image_tag("Home-Advisor-Roofing-Reviews.png", class: "img-fluid") %>
+<%= image_tag("Trust-Pilot-Roofing-Reviews.jpg", class: "img-fluid") %>
+<%= image_tag("Yelp-Roofing-Reviews.png", class: "img-fluid") %>
+<%= image_tag("BBB-Accredited-Roofer.png", class: "img-fluid") %>
 
 <%= render "layouts/testimonials" %>
 
