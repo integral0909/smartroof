@@ -4,7 +4,7 @@
 		<div class="col-md-4">
 			<div class="card mb-3 mb-md-0">
 
-				<%= image_tag("Bailey-Thomas", class: "testimonial") %>
+				<%= asset_path("Bailey-Thomas", class: "testimonial") %>
 				<div class="card-body">
 			    <h5 class="card-title">Bailey Thomas</h5>
 					<img width="30" height="30" src="data:image/png;base64,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">
@@ -22,7 +22,7 @@
 		</div>
 		<div class="col-md-4">
 			<div class="card mb-3 mb-md-0">
-				<%= image_tag("Amanda-Gonzalez", class: "testimonial") %>
+				<%= asset_path("Amanda-Gonzalez", class: "testimonial") %>
 				<div class="card-body">
 			    <h5 class="card-title">Amanda Gonzalez</h5>
 
@@ -41,7 +41,7 @@
 		</div>
 		<div class="col-md-4">
 			<div class="card mb-3 mb-md-0">
-				<%= image_tag("Richard-Cooper", class: "testimonial") %>
+				<%= asset_path("Richard-Cooper", class: "testimonial") %>
 				<div class="card-body">
 			    <h5 class="card-title">Richard Cooper</h5>
 
