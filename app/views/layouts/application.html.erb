@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Smartroof</title>
+     <%= display_meta_tags %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -18,10 +18,12 @@
 
     <%= yield %>
 
-    <%= render "layouts/footer" %>
-
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{GOOGLE_MAPS_API}&libraries=places&callback=roofs.init" %>
     <%= javascript_include_tag 'https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js' %>
+
+    <%= render "layouts/footer" %>
+
+    
     <!--Start of Zendesk Chat Script-->
     <script type="text/javascript">
     window.$zopim||(function(d,s){var z=$zopim=function(c){

@@ -16,6 +16,9 @@ $body-bg: #fff;
 @import url('https://fonts.googleapis.com/css?family=Lato:300, 400');
 
 html, body { overflow-x: hidden; }
+.smart-roof-logo {
+  width:35px;
+}
 .join-link {
   position:absolute;
   top:14px;
