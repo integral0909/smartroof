@@ -5,11 +5,27 @@
 
 <%= image_tag("Smart-Roof.png", class: "logo") %>
 <div class="phone-link"><a href="#" class="text-white">(678) 439-6456</a></div>
-<div class="login-link"><a href="#" class="text-white">Sign In</a></div>
-<div class="join-link"><a href="#" class="text-white">Join</a></div>
+
+<% if user_signed_in? %>
+  <div class="login-link">
+  <%= link_to('Sign Out', destroy_user_session_path, method: :delete, class: "text-white") %>        
+  </div>
+<% else %>
+  <div class="login-link">
+  	<%= link_to('Sign In', new_user_session_path, class: "text-white")  %>
+  </div>
+  <div class="join-link"> 
+  	<%= link_to('Join', new_user_session_path, class: "text-white")  %>
+  </div>
+<% end %>
+
+
 
 
 <!--
+<div class="login-link"><a href="#" class="text-white">Sign In</a></div>
+<div class="join-link"><a href="#" class="text-white">Join</a></div>
+
 <a href="tel:16784882616" class="phone">
 	<img class="phone-icon icon icons8-Phone-Filled" width="20" height="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACvElEQVRoQ+2ZgXHUMBBF/68AOoBUAKkAUgGkApIOoAJSAqmAdEA6IKmApIKECqCDZT5jZ3SOLGsln+QJaObmbua09j7vavdLJp7I4BPhwL8FYmbvAXwG8BrADYBTkvrezFiMiJl9BXAy8fg3gEOS91shmQUxs+cAvg9RiPl7RfJo0yAZEKP/n0h+2QLMo4g4IOT/ZlIsBvIjkU6bTbEdEDM7G6qTN1tUxS68RmvOn4LcAXhZcAOl2AFJfXcZUxCr8OKS5HGFfZXpFOQKwJuKKx6TvKywLzadgsiJd8VXA+5JHlTYF5tOQdTB1cmLB8lFtVB88YThFETd/FfFjW5JSo81H7E+UpNe3cpwDERK91vBI+0WDfkazWczk6p94YQ5Iqmq12XMgXgX/TXJt10IhpumZLynp3TrH+PDS4Go+khA5ozuKjhZ850iUltfrZMuemuxeZmZHHyVExYA3fRWDohSTOvlWSbMBcnTzLmrTVsE0Z3MzFvFmsNkgQww2jh9cDzCpjDZIAOMZ73IpBmMF0SiUjCert8ExgUyRMW7+JtExg1SASNVLXX8qM+Ymdbex+H0RjpP52WunWYRSACT2/nHGqG0lJz5e9RqZtJn2sjFDjxmwWMFpxiksCzLTBFROVcEloSm5p6RPF+qllUgFTBLfk3/V0NWWs4emleDNIRJRmcVkIoC4I2M5kejsxpIYxhFR0r74WXTqiABjCqOp2mWROaG5OFouDrIACMFoBTIlf8lIAjP0PYCMnplZl6h6QHaObXZK0hQ0fRWK3c/kwuzc06wd5Bg3Sg6a6XaOUk11IfRBCRItdIXSaHP0aOnpiBBdJRqJa8vbiVrYsKzOUgQHektRSi3TM9C6JrdQAIgCUfle+q9TBJiEyABkHqPDtD10W+l3s9hu6zIJUf3iCw5mPv/f5DcJ9Vq3h/zC/kz0ya27AAAAABJRU5ErkJggg==">678-488-2616</a>
 -->

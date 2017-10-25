@@ -33,9 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'jquery-rails'
-gem 'meta-tags'
+
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '4.0.0.beta'
@@ -47,6 +46,9 @@ gem 'slim-rails'
 gem 'dotenv-rails'
 gem 'geocoder'
 gem 'bootstrap_form'
+
+gem 'meta-tags'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
