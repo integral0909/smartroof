@@ -1,0 +1,11 @@
+<% title 'Free Roofing Estimate - Instant Satellite Roofing Estimates - Smart Roof' %> 
+<% description 'Draw your roof to get an free estimate on your roof! Its easy and takes less than a minute' %>
+<%= render "layouts/header" %>
+
+<h1>
+  <%= @post.title %>
+</h1>
+<%= @post.body.html_safe %>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

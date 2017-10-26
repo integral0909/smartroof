@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :roofs, only: %i(index show create update)
+  resources :posts
+
+  get 'blog', to: 'posts#index'
 
   get '/fencing' => 'pages#fencing'
 
@@ -15,5 +18,7 @@ Rails.application.routes.draw do
   get '/privacy' => 'pages#privacy'
 
   root 'pages#home'
+
+
 
 end

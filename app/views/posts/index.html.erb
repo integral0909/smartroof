@@ -1,0 +1,29 @@
+<% title 'Free Roofing Estimate - Instant Satellite Roofing Estimates - Smart Roof' %> 
+<% description 'Draw your roof to get an free estimate on your roof! Its easy and takes less than a minute' %>
+
+
+<%= render "layouts/header" %>
+
+
+<div class="container mt-5 mb-5">
+  <h1 class="display-5">Roofing Blog</h1>
+  <div class="col-md-10 col-12 mx-auto blog-content">
+    <% @posts.each do |post| %>
+    <div class="col-12">
+      <div class="text-center">
+        <h2><%= post.title %></h2>
+        <h6><%= post.created_at.strftime('%b %d, %Y') %></h6>
+      </div>
+
+      <div>
+        <%= raw(post.body).truncate(358) %>
+      </div>
+
+      <div class="text-center">
+        <%= link_to "Read More", post %>
+      </div>
+      <br>
+    </div>
+    <% end %>
+  </div>
+</div>

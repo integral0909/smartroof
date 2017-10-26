@@ -42,13 +42,13 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-leaflet-draw'
 end
 
-gem 'slim-rails'
 gem 'dotenv-rails'
 gem 'geocoder'
 gem 'bootstrap_form'
 
 gem 'meta-tags'
 gem 'devise'
+gem 'tinymce-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

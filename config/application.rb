@@ -12,6 +12,7 @@ module Smartroof
     config.load_defaults 5.1
 
     config.assets.paths << "#{Rails.root}/app/assets/videos"
+
     
 
     # Settings in config/environments/* take precedence over those specified here.
