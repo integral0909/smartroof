@@ -3,6 +3,12 @@
 
 
 <%= render "layouts/header" %>
+<div class="bg-primary text-white jumbotron jumbotron-fluid mb-0">
+  <div class="container text-center">
+    <h1>Roofing Blog</h1>
+    <p class="lead">Hire a roofing professional that's right for you.</p>
+  </div>
+</div>
 
 
 <div class="container mt-5 mb-5">
@@ -23,6 +29,13 @@
         <%= link_to "Read More", post %>
       </div>
       <br>
+      <% if signed_in? %>
+        <%= link_to "Show", posts_path(posts), class: "btn btn-primary" %>
+        <%= link_to "Edit", edit_posts_path(posts), class: "btn btn-default" %>
+        <%= link_to "Delete", posts_path(posts), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
+      <% end %>
+
+     
     </div>
     <% end %>
   </div>

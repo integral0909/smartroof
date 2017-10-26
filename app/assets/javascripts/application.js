@@ -16,5 +16,5 @@
 //= require jquery_ujs
 //= require rails-ujs
 //= require turbolinks
-//= require tinymce
+//= require froala_editor.min.js
 //= require_tree .

@@ -48,7 +48,8 @@ gem 'bootstrap_form'
 
 gem 'meta-tags'
 gem 'devise'
-gem 'tinymce-rails'
+gem "wysiwyg-rails"
+gem 'carrierwave'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
