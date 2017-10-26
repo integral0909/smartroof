@@ -187,7 +187,7 @@ header {
   object-fit: cover;
 }
 
-/* Devise */
+/* Devise Sign In*/
 .form-signin {
   max-width: 330px;
   padding: 15px;
@@ -220,7 +220,12 @@ header {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
-
-
-
+.pass-1 {
+  margin-bottom: -1px !important;
+  border-radius: 0 !important;
+}
+.pass-2 {
+  margin-bottom: 10px !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}

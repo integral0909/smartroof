@@ -2,31 +2,25 @@
 
 <div class="container mt-5">
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "form-signin") do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-signin"}) do |f| %>
     <%= devise_error_messages! %>
 
-    <h2 class="form-signin-heading">Sign in</h2>
+    <h2 class="form-signin-heading">Sign Up</h2>
 
     <div class="field">
-      <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, required: true, placeholder: "Email address", class: "form-control" %>
     </div>
 
     <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.password_field :password, autocomplete: "off", required: true, placeholder: "Password", class: "pass-1 form-control" %>
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", required: true, placeholder: "Password Again", class: "pass-2 form-control" %>
     </div>
 
-    <div class="actions">
-      <%= f.submit "Sign up" %>
+    <div class="form-group">
+      <%= f.submit "Sign up", class: "btn btn-lg btn-primary btn-block" %>
     </div>
   <% end %>
 
