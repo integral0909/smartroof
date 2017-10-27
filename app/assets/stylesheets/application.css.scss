@@ -62,7 +62,9 @@ html, body { overflow-x: hidden; }
   font-weight:300;
   z-index:1;
 }
-
+.advice-image {
+  max-height:310px;
+}
 ul {
   list-style-type: none;
 }
