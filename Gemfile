@@ -36,12 +36,15 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-bootstrap', '4.0.0.beta'
-  gem 'rails-assets-leaflet'
-  gem 'rails-assets-leaflet-draw'
-end
+# source 'https://rails-assets.org' do
+#   gem 'rails-assets-bootstrap', '4.0.0.beta'
+#   gem 'rails-assets-leaflet'
+#   gem 'rails-assets-leaflet-draw'
+# end
 
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'rails-assets-leaflet'
+gem 'rails-assets-leaflet-draw'
 gem 'dotenv-rails'
 gem 'geocoder'
 gem 'bootstrap_form'

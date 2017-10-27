@@ -4,21 +4,21 @@
      <%= display_meta_tags %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'true' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'true' %>
 
     <script src="https://use.fontawesome.com/14b036f48a.js"></script>
 
   </head>
 
   <body>
-    
+
     <%- flash.each do |k, v| %>
         <div id="<%= k %>"><%= v %></div>
-    <% end %> 
+    <% end %>
 
 
     <%= yield %>
@@ -28,13 +28,13 @@
 
     <%= render "layouts/footer" %>
 
-    
+
     <!-- Start of Async Drift Code -->
     <script>
     !function() {
       var t;
-      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
-      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
       t.factory = function(e) {
         return function() {
           var n;
@@ -44,8 +44,8 @@
         t[e] = t.factory(e);
       }), t.load = function(t) {
         var e, n, o, i;
-        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
-        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
         n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
       });
     }();

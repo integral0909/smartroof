@@ -12,12 +12,12 @@ $enable-transitions: true;
 $body-bg: #fff;
 */
 
- @import "froala_editor.min";
- @import "froala_style.min";
- @import "font-awesome-sprockets";
- @import "font-awesome";
- @import "bootstrap";
- @import url('https://fonts.googleapis.com/css?family=Lato:300, 400');
+@import "froala_editor.min";
+@import "froala_style.min";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Lato:300, 400');
 
 @import 'plugins/char_counter.min.css';
 @import 'plugins/code_view.min.css';

@@ -1,6 +1,9 @@
 //= require leaflet
 //= require leaflet-draw
 //= require jquery
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require rails-ujs
 //= require turbolinks
@@ -34,5 +37,3 @@
 //= require plugins/url.min.js
 //= require plugins/video.min.js
 //= require_tree .
-
-
