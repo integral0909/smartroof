@@ -13,7 +13,7 @@
 
 <div class="container-fluid mt-5 mb-5">
   <div class="row">
-    <div class="col-md-8 col-12 blog-content">
+    <div class="col-md-9 col-12 blog-content">
       <div class="row">
         <% @posts.each do |post| %>
           <div class="col-md-6">
@@ -25,7 +25,7 @@
               </div>
 
               <div class="pl-3">
-                <%= raw(post.body).truncate(358) %>
+                <%= raw(post.body).truncate(200) %>
               </div>
 
               <div class="text-center">
@@ -42,14 +42,31 @@
         <% end %>
       </div>
     </div>
-    <div class="col-md-4 col-12">
+    <div class="col-md-3 col-12">
+      <div class="row mb-4">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Need roofing help?</h4>
+              <p class="card-text">Call our experts for free advice or get a roofing estimate in less than a minute.</p>
+              <a href="tel:+16784396456" class="btn btn-primary card-link">(678) 439-6456</a>
+              <a href="#" class="card-link">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <%= image_tag("United-States.png", class: "img-fluid") %>
       <div class="input-group input-group-lg">
-        <input type="text" class="form-control" placeholder="Enter your address..." aria-label="Search for..." autofocus="">
+        <input type="text" class="form-control no-br-top-left" placeholder="Enter your address..." aria-label="Search for..." autofocus="">
         <span class="input-group-btn">
-          <button class="btn btn-success" type="button">Go!</button>
+          <button class="btn btn-success no-br-top-right" type="button">Go!</button>
         </span>
       </div>
+
+
+
+      
     </div>
   </div>
 </div>
